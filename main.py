@@ -45,7 +45,7 @@ plt.plot(months[:12] + months[12+1:], PL_profit_before_tax[:12] + PL_profit_befo
 
 # Labels and Title
 plt.xlabel("Time (months)", fontsize=24, fontweight='bold', labelpad=30)
-plt.ylabel("Profit (ILS)", fontsize=24, fontweight='bold', labelpad=60, rotation=0)
+plt.ylabel("Profit (USD)", fontsize=24, fontweight='bold', labelpad=60, rotation=0)
 # plt.title("Profit & Loss Statement")
 plt.xlim(1, 36)  # Focus mainly on 1-12 (leave space for 24 & 36)
 
@@ -55,7 +55,7 @@ plt.yscale("log")
 # Format Y-axis labels in dollar notation ($10K, $100K, $1M, $10M)
 plt.yticks(
     [10_000, 100_000, 1_000_000, 5_000_000],  # Scale levels
-    ["10K", "100K", "1M", "5M"]  # Labels
+    ["0", "100K", "1M", "5M"]  # Labels
 )
 # Format Y-axis labels in dollar notation ($10K, $100K, $1M, $10M)
 plt.xticks(
@@ -109,7 +109,7 @@ for i in range(len(CF_ending_cash)-1):
 
 # Labels and Title
 plt.xlabel("Time (months)", fontsize=24, fontweight='bold', labelpad=30)
-plt.ylabel("Cash (ILS)", fontsize=24, fontweight='bold', labelpad=60, rotation=0)
+plt.ylabel("Cash (USD)", fontsize=24, fontweight='bold', labelpad=60, rotation=0)
 # plt.title("Cash Flow Statement")
 plt.xlim(1, 36)
 
@@ -118,8 +118,8 @@ plt.yscale('symlog', linthresh=100000)  # Linear scaling between -100k and 100k,
 
 # Add more ticks with focused range
 plt.yticks(
-    [-500_000, 0, 100_000, 1_000_000, 5_000_000],
-    ["-500K", "0", "100K", "1M", "5M"]
+    [-300_000, 0, 100_000, 1_000_000, 5_000_000],
+    ["-300K", "0", "100K", "1M", "5M"]
 )
 
 plt.xticks(
